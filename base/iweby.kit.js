@@ -242,7 +242,7 @@ class iwebyKit {
             // Handle anchor click
             if (target.closest('a')) {
                 const href = target.closest('a').getAttribute('href');
-                if (!thisInstance.isValue(href) || thisInstance.isMatch(href, '#')) {
+                if (!thisInstance.isValue(href) || thisInstance.isMatch(href, '#') || thisInstance.isMatch(href, 'javascript:void(0);')  || thisInstance.isMatch(href, 'javascript:void(0)')) {
                     e.preventDefault();
                     
                     // Hide tips message
