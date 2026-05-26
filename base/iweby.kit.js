@@ -1711,6 +1711,11 @@ class iwebyKit {
                 const xhr = new XMLHttpRequest();
                 xhr.open(requestData.method, requestData.url, true);
 
+                // If the request type is blob, you must tell XHR in advance, otherwise the file download will be corrupted.
+                if (requestData.dataType.toLowerCase() === 'blob') {
+                    xhr.responseType = 'blob';
+                }
+                
                 // Standard JWT/Bearer Token
                 if (requestData.bearerToken) {
                     xhr.setRequestHeader('Authorization', 'Bearer ' + requestData.bearerToken);
