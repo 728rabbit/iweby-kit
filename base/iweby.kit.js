@@ -3380,6 +3380,71 @@ class iwebyKit {
         thisInstance.setCookie(cname, '', -1);
     }
 
+    // local storage
+    setLocalStorage(key, value) {
+        const thisInstance = this;
+        try {
+            const data = {
+                type: thisInstance.typeOfValue(value),
+                value: thisInstance.serializeValue(value)
+            };
+            localStorage.setItem(key, JSON.stringify(data));
+        } catch (error) {
+            alert(`Write Storage failed [${key}]: ${error}`);
+        }
+    }
+
+    getLocalStorage(key, defaultValue = null) {
+        const thisInstance = this;
+        try {
+            const item = localStorage.getItem(key);
+            if (!item) { return defaultValue; }
+            
+            const { type, value } = JSON.parse(item);
+            return thisInstance.deserializeValue(type, value);
+        } catch (error) {
+            alert(`Read Storage failed [${key}]: ${error}`);
+            return defaultValue;
+        }
+    }
+
+    deleteLocalStorage(key) {
+        if(key) {
+            localStorage.removeItem(key);
+        }
+        else {
+            localStorage.clear();
+        }
+    }
+
+    typeOfValue(value) {
+        if (value === null) return 'null';
+        if (value === undefined) return 'undefined';
+        if (value instanceof Date) return 'date';
+        if (value instanceof Map) return 'map';
+        if (value instanceof Set) return 'set';
+        if (Array.isArray(value)) return 'array';
+        return typeof value;
+    }
+
+    serializeValue(value) {
+        if (value === undefined) return null;
+        if (value instanceof Date) return value.toISOString();
+        if (value instanceof Map) return Array.from(value.entries());
+        if (value instanceof Set) return Array.from(value);
+        return value;
+    }
+
+    deserializeValue(type, value) {
+        switch (type) {
+            case 'date': return new Date(value);
+            case 'map': return new Map(value);
+            case 'set': return new Set(value);
+            case 'undefined': return undefined;
+            default: return value;
+        }
+    }
+
     // others
     deBounce(callBack, delay = 100, prevent = true) {
         let timeout;
