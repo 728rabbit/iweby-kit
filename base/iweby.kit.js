@@ -3336,17 +3336,17 @@ class iwebyKit {
     }
 
     // cookie
-    setCookie(cname, cvalue, exdays = 14) {
+    setCookie(key, value, exdays = 14) {
         const thisInstance = this;
 
         if (navigator.cookieEnabled) {
-            if (thisInstance.isValue(cname)) {
+            if (thisInstance.isValue(key)) {
                 const d = new Date();
                 d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
                 const expires = 'expires=' + d.toUTCString();
                 const pathParts = window.location.pathname.split('/');
                 const projectFolder = ((pathParts.length > 1 && pathParts[1] !== '') ? '/' + pathParts[1] + '/' : '/');
-                document.cookie = cname + '=' + cvalue + ';' + expires + ';path=' + projectFolder;
+                document.cookie = key + '=' + value + ';' + expires + ';path=' + projectFolder;
             }
         } 
         else {
@@ -3354,12 +3354,12 @@ class iwebyKit {
         }
     }
 
-    getCookie(cname) {
+    getCookie(key) {
         const thisInstance = this;
 
         if (navigator.cookieEnabled) {
-            if (thisInstance.isValue(cname)) {
-                const name = cname + '=';
+            if (thisInstance.isValue(key)) {
+                const name = key + '=';
                 const ca = document.cookie.split(';');
                 for (let i = 0; i < ca.length; i++) {
                     let c = ca[i].trim();
@@ -3375,9 +3375,9 @@ class iwebyKit {
         return '';
     }
 
-    deleteCookie(cname) {
+    deleteCookie(key) {
         const thisInstance = this;
-        thisInstance.setCookie(cname, '', -1);
+        thisInstance.setCookie(key, '', -1);
     }
 
     // local storage
