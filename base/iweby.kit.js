@@ -907,9 +907,7 @@ class iwebyKit {
                                 fillText.setAttribute('data-validation', 'required');
                             }
                         }
-                        
-                        console.log((input.getAttribute('data-placeHolder') || ''));
-                        
+
                         fillText.placeholder = (input.getAttribute('data-placeHolder') || '');
                         fillText.classList.add('fill-text');
                         fillText.style.display = 'block';
