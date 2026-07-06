@@ -907,7 +907,10 @@ class iwebyKit {
                                 fillText.setAttribute('data-validation', 'required');
                             }
                         }
-                        fillText.placeHolder = (input.getAttribute('data-placeHolder') || '');
+                        
+                        console.log((input.getAttribute('data-placeHolder') || ''));
+                        
+                        fillText.placeholder = (input.getAttribute('data-placeHolder') || '');
                         fillText.classList.add('fill-text');
                         fillText.style.display = 'block';
                         fillText.style.width = '100%';
@@ -1032,7 +1035,7 @@ class iwebyKit {
                             const filterInput = document.createElement('input');
                             filterInput.id = 'fkw_' + selectIndex;
                             filterInput.type = 'text';
-                            filterInput.placeHolder = placeHolderText.trim();
+                            filterInput.placeholder = placeHolderText.trim();
 
                             // Append elements
                             filterLi.appendChild(filterInput);
@@ -4477,7 +4480,7 @@ class iPagination {
                 let inputLi = this.createPaginationElement('li');
                 let jumpInput = this.createPaginationElement('input', 'jumpto_page');
                 jumpInput.type = 'text';
-                jumpInput.placeHolder = this.options.placeHolder;
+                jumpInput.placeholder = this.options.placeholder;
                 jumpInput.setAttribute('data-max', totalPage);
                 this.jumpToPage(jumpInput);
                 inputLi.appendChild(jumpInput);
