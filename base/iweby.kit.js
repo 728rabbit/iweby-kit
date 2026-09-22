@@ -1411,8 +1411,8 @@ class iwebyKit {
                         // Wrap the element in a div with 'iweby-responsive' class
                         const wrapper = document.createElement('div');
                         wrapper.className = 'iweby-responsive';
-                        wrapper.setAttribute('data-width', e.offsetWidth);
-                        wrapper.setAttribute('data-height', e.offsetHeight);
+                        wrapper.setAttribute('data-width', (e.getAttribute('width') || e.offsetWidth));
+                        wrapper.setAttribute('data-height', (e.getAttribute('height') || e.offsetHeight));
 
                         e.classList.add('vframe');
                         e.parentNode.insertBefore(wrapper, e);
