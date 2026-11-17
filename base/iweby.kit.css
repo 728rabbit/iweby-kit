@@ -1246,6 +1246,7 @@ div.imodal-dialog > div.resize-handle {
 div.iweby-alert-dialog {
     position: fixed;
     background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
     top: 0px;
     left: 0px;
     right: 0px;
@@ -1349,6 +1350,7 @@ div.iweby-alert-dialog > div > div.content > button.btn:active {
 div.iweby-info-dialog {
     position: fixed;
     background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
     top: 0px;
     left: 0px;
     right: 0px;
