@@ -114,6 +114,7 @@ html.large-font {
 
 body {
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 16px;
     font-size: 1rem;
     color: var(--icolor-black);
     min-width: 360px;
@@ -240,6 +241,7 @@ small.required-red-dot {
 
 input[type="file"] {
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 15px;
     font-size: 0.9375rem;
 }
 
@@ -257,6 +259,7 @@ input[type="number"]{
     appearance: none;
     background-color: var(--icolor-white);
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 15px;
     font-size: 0.9375rem;
     color: var(--icolor-black);
     max-width: 100%;
@@ -299,6 +302,7 @@ textarea {
     appearance: none;
     background-color: var(--icolor-white);
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 15px;
     font-size: 0.9375rem;
     color: var(--icolor-black);
     max-width: 100%;
@@ -394,6 +398,7 @@ input[type="range"]::-ms-thumb {
 select {
     background-color: var(--icolor-white);
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 15px;
     font-size: 0.9375rem;
     color: var(--icolor-black);
 }
@@ -407,6 +412,7 @@ button {
     -moz-appearance: none;
     appearance: none;
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 16px;
     font-size: 1rem;
     max-width: 100%;
     padding: 6px 12px;
@@ -419,6 +425,7 @@ button.btn,
 a.btn {
     display: inline-block;
     font-family: 'NotoSansTC', 'NotoSansSC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Heiti TC', 'Arial', sans-serif;
+    font-size: 16px;
     font-size: 1rem;
     min-height: 36px;
     padding: 8px 16px;
@@ -571,6 +578,7 @@ div.iweby-tips-message > div > a.close {
     top: 50%;
     right: 0px;
     width: 30px;
+    font-size: 20px;
     font-size: 1.25rem;
     line-height: 36px;
     text-align: center;
@@ -583,6 +591,7 @@ div.iweby-tips-message > div > span {
 
 div.iweby-editor {
     position: relative;
+    font-size: 16px;
     font-size: 1rem;
     line-height: 2;
     overflow: auto;
@@ -1246,7 +1255,8 @@ div.imodal-dialog > div.resize-handle {
 div.iweby-alert-dialog {
     position: fixed;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     top: 0px;
     left: 0px;
     right: 0px;
@@ -1350,7 +1360,8 @@ div.iweby-alert-dialog > div > div.content > button.btn:active {
 div.iweby-info-dialog {
     position: fixed;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     top: 0px;
     left: 0px;
     right: 0px;
@@ -1944,6 +1955,7 @@ div.iweby-row div.ivalue {
     display: inline-block;
     background: var(--icolor-white);
     width: 100%;
+    font-size: 16px;
     font-size: 1rem;
     max-width: 100%;
     min-height: 36px;
@@ -2234,6 +2246,7 @@ div.iweby-video button.v-fullscreen-btn > svg {
 
 div.iweby-video span.v-duration {
     display: block;
+    font-size: 14px;
     font-size: 0.875rem;
     color: #fff;;
 }
@@ -2284,6 +2297,7 @@ div.widget.last {
 div.widget div.w-title {
     position: relative;
     display: block;
+    font-size: 20px;
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--icolor-primary);
