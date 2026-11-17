@@ -3845,8 +3845,8 @@ class iwebyKit {
                 } 
                 else {
                     processingDiv.style.background = 'rgba(255, 255, 255, ' + opacity + ')';
+                    processingDiv.style.backdropFilter = 'blur(5px)';
                 }
-
 
                 // Create the inner loading div
                 const loadingDiv = document.createElement('div');
