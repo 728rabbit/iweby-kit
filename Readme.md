@@ -1,6 +1,6 @@
 ![Description](iweby-logo.png)
 
-## iWeby (internet web for you) Kit :
+## iWeby (Innovative Web, Built for You) Kit :
 Helps you easily build web applications with the most commonly used features already included. e.g. select, checkbox, radio, pagaration, popup dialog, ajax post, ajax form and so on
 
 In addition, efforts are being made to develop other tools (e.g. Simple Resource Calendar etc)
@@ -16,7 +16,7 @@ Terms of Use:
 All rights reserved.
 
 
-## 您的互聯網站工具庫：
+## iWeby（創新網頁，為你度身訂造）網頁套件：
 
 它能幫助您輕鬆建立 Web 應用程序，並已預先安裝了最常用的功能，例如：下拉清單、複選框、單選按鈕、分頁、彈出對話框、Ajax POST 請求、Ajax 表單等等。
 
