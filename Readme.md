@@ -16,7 +16,7 @@ Terms of Use:
 All rights reserved.
 
 
-## iWeby（創新網頁，為你度身訂造）網頁套件：
+## iWeby（創新網頁，為你度身訂造）開發套件：
 
 它能幫助您輕鬆建立 Web 應用程序，並已預先安裝了最常用的功能，例如：下拉清單、複選框、單選按鈕、分頁、彈出對話框、Ajax POST 請求、Ajax 表單等等。
 
