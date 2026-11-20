@@ -137,7 +137,7 @@ class iwebyKit {
         const setViewMode = (width) => {
             const BREAKPOINTS = {
                 DESKTOP: 900,
-                TABLET: 640
+                TABLET: 600
             };
 
             const MODES = ['desktop', 'tablet', 'mobile'];
