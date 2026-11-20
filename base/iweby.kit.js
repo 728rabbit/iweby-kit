@@ -1654,7 +1654,7 @@ class iwebyKit {
         const rtable = document.querySelectorAll('table.iweby-table');
         if(rtable.length > 0) {
             rtable.forEach(function(table) {
-                const switch_width = (table.dataset.rw || 600);
+                const switch_width = (table.dataset.rw || 780);
                 const headerTxts = Array.from(table.querySelectorAll('thead th'), th => th.textContent.trim());
                 if(switch_width >= thisInstance.viewerWidth) {
                     let headerBackground = [];
